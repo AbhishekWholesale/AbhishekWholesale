@@ -23,37 +23,37 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
   background: #000;
   color: white;
 }
 
 header .hero-text {
-  flex: 3;
-  min-width: 300px;
+  flex: 1 1 300px;
   padding-right: 2rem;
 }
 
 header .hero-text h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
 header .hero-text p {
-  font-size: 1.6rem;
-  margin-bottom: 2rem;
-  max-width: 800px;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
 }
 
 header .hero-text .btn {
   background: #ff6f61;
   color: white;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 50px;
   font-weight: 500;
   transition:0.3s;
+  display: inline-block;
 }
 
 header .hero-text .btn:hover {
@@ -61,14 +61,14 @@ header .hero-text .btn:hover {
 }
 
 header .hero-image {
-  flex: 1;
-  min-width: 300px;
+  flex: 1 1 250px;
   text-align: center;
+  margin-top: 1rem;
 }
 
 header .hero-image img {
   width: 100%;
-  max-width: 320px;
+  max-width: 250px;
   border-radius: 20px;
   transition: transform 0.3s;
 }
@@ -79,68 +79,68 @@ header .hero-image img:hover {
 
 /* Features Section */
 section#features {
-  padding: 5rem 2rem;
+  padding: 4rem 2rem;
   background: #fff;
   text-align: center;
 }
 
 section#features h2 {
-  font-size: 2.8rem;
-  margin-bottom: 3rem;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
   color: #ff6f61;
 }
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1.5rem;
 }
 
 .feature-card {
   background: #fef2f2;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 15px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .feature-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
 .feature-card i {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #ff6f61;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .feature-card h3 {
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .feature-card p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #555;
 }
 
 /* Products Section */
 section#products {
-  padding: 5rem 2rem;
+  padding: 4rem 2rem;
   background: #f9f9f9;
   text-align: center;
 }
 
 section#products h2 {
-  font-size: 2.8rem;
-  margin-bottom: 3rem;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
   color: #ff6f61;
 }
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1.5rem;
 }
 
 .product-card {
@@ -151,56 +151,58 @@ section#products h2 {
 }
 
 .product-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
 .product-card img {
   width: 100%;
-  height: 220px;
+  height: 180px;
   object-fit: cover;
 }
 
 .product-card h3 {
-  margin: 1rem 0 0.5rem;
-  font-size: 1.3rem;
+  margin: 0.8rem 0 0.3rem;
+  font-size: 1.1rem;
   color: #ff6f61;
 }
 
 .product-card p {
-  padding: 0 1rem 1rem;
+  padding: 0 0.8rem 0.8rem;
   color: #555;
+  font-size: 0.95rem;
 }
 
-/* Auto-scrollable Images Section */
+/* Gallery Section */
 section#gallery {
-  padding: 5rem 2rem;
+  padding: 4rem 2rem;
   background: #fff;
   text-align: center;
-  overflow: hidden;
 }
 
 section#gallery h2 {
-  font-size: 2.8rem;
-  margin-bottom: 3rem;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
   color: #ff6f61;
 }
 
 .gallery-container {
-  overflow: hidden;
+  overflow-x: auto; /* allow manual horizontal scroll */
   width: 100%;
+  -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
 }
 
 .auto-scroll {
   display: flex;
   gap: 1rem;
   animation: scroll 10s linear infinite;
+  min-width: max-content;
 }
 
 .auto-scroll img {
   flex: 0 0 auto;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 15px;
 }
@@ -212,56 +214,57 @@ section#gallery h2 {
 
 /* Testimonials Section */
 section#testimonials {
-  padding: 5rem 2rem;
+  padding: 4rem 2rem;
   background: #fef2f2;
   text-align: center;
 }
 
 section#testimonials h2 {
-  font-size: 2.8rem;
-  margin-bottom: 3rem;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
   color: #ff6f61;
 }
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 1.5rem;
 }
 
 .testimonial-card {
   background: #fff;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 15px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .testimonial-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
 .testimonial-card p {
   font-style: italic;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   color: #555;
 }
 
 .testimonial-card h4 {
   color: #ff6f61;
   font-weight: 700;
+  font-size: 1rem;
 }
 
 /* Contact Section */
 section#contact {
-  padding: 5rem 2rem;
+  padding: 4rem 2rem;
   background: #f9f9f9;
   text-align: center;
 }
 
 section#contact h2 {
-  font-size: 2.8rem;
-  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
   color: #ff6f61;
 }
 
@@ -270,7 +273,7 @@ section#contact h2 {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .contact-btn {
@@ -278,7 +281,7 @@ section#contact h2 {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 50px;
   color: white;
   font-weight: 600;
@@ -288,14 +291,14 @@ section#contact h2 {
 .contact-btn.whatsapp { background: #25D366; }
 .contact-btn.instagram { background: #E4405F; }
 
-.contact-btn:hover { transform: scale(1.1); }
+.contact-btn:hover { transform: scale(1.05); }
 
 section#contact iframe {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   border-radius: 15px;
   width: 100%;
   max-width: 800px;
-  height: 400px;
+  height: 350px;
   border: 0;
 }
 
@@ -306,13 +309,13 @@ section#contact iframe {
   right: 20px;
   background: #25D366;
   color: white;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   z-index: 1000;
   transition: transform 0.3s;
@@ -335,46 +338,6 @@ footer a {
 }
 
 footer a:hover { text-decoration: underline; }
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    padding: 3rem 1rem;
-    text-align: center;
-  }
-
-  header .hero-text {
-    padding-right: 0;
-    margin-bottom: 2rem;
-  }
-
-  header .hero-text h1 {
-    font-size: 2.8rem;
-  }
-
-  header .hero-text p {
-    font-size: 1.2rem;
-  }
-
-  header .hero-image img {
-    max-width: 220px;
-    margin-top: 1rem;
-  }
-
-  .products-grid, .features-grid, .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-
-  section#gallery .auto-scroll img {
-    width: 180px;
-    height: 180px;
-  }
-
-  section#contact iframe {
-    height: 300px;
-  }
-}
 </style>
 </head>
 <body>
