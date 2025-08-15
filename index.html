@@ -194,7 +194,7 @@ section#gallery h2 {
 .auto-scroll {
   display: flex;
   gap: 1rem;
-  animation: scroll 15s linear infinite;
+  animation: scroll 10s linear infinite;
 }
 
 .auto-scroll img {
@@ -335,6 +335,46 @@ footer a {
 }
 
 footer a:hover { text-decoration: underline; }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  header .hero-text {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  header .hero-text h1 {
+    font-size: 2.8rem;
+  }
+
+  header .hero-text p {
+    font-size: 1.2rem;
+  }
+
+  header .hero-image img {
+    max-width: 220px;
+    margin-top: 1rem;
+  }
+
+  .products-grid, .features-grid, .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section#gallery .auto-scroll img {
+    width: 180px;
+    height: 180px;
+  }
+
+  section#contact iframe {
+    height: 300px;
+  }
+}
 </style>
 </head>
 <body>
